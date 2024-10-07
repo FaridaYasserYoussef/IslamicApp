@@ -32,6 +32,13 @@ List<Widget> tabs = [
         )
       ),
       child: Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.transparent,
+          title: Text("إسلامي",
+          style: Theme.of(context).textTheme.headlineMedium
+          ),
+        ),
         body: tabs[index],
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: index,

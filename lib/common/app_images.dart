@@ -10,6 +10,9 @@ static const String hadeethIcon = "assets/images/quran-quran-svgrepo-com.png";
 static const String radioHeaderIcon = "assets/images/551-5517026_radio-vector-png-old-radio-png-vector-transparent.png";
 static const String sebhaHeaderIconLight = "assets/images/sebha-light.png";
 static const String sebhaHeaderIconDark = "assets/images/sebha-dark-mode.png";
-static const String quranHeaderIcon = "assets/images/quran-header-icn.png";
-static const String hadeethHeaderIcon = "assets/images/hadith-header.png";
+static const String quranHeaderIcon = "assets/images/quran_header_icn.png";
+static const String hadeethHeaderIcon = "assets/images/hadith_header.png";
+static const String suraItemIcon = "assets/images/suraIcon.png";
+static const String hadeethItemIcon = "assets/images/hadeethIcon.png";
+
 }

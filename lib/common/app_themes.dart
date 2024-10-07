@@ -5,10 +5,15 @@ class AppThemes{
 static ThemeData lightTheme = ThemeData(
   scaffoldBackgroundColor: Colors.transparent,
   textTheme: TextTheme(
-      displayMedium: TextStyle(
+      titleMedium: TextStyle(fontWeight: FontWeight.w500, fontSize: 15, color: Colors.black),
+      titleLarge: TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: 25,
+        color: Colors.black,),
+      headlineMedium: TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 30,
-          color: AppColors.blackColor,)),
+          color: Colors.black,)),
   dividerTheme: DividerThemeData(
     color: AppColors.mainColorLight
   ),
@@ -23,19 +28,30 @@ static ThemeData lightTheme = ThemeData(
     primary: AppColors.mainColorLight,
       brightness: Brightness.light,
       onPrimary: AppColors.onPrimaryLight,
-      secondary: Colors.white,
-      onSecondary: Colors.white,
-      error: Colors.white,
-      onError: Colors.white,
+      secondary: AppColors.blackColor,
+      onSecondary: AppColors.blackColor,
+      error: Colors.red,
+      onError: Colors.red,
       background: Colors.white,
-      onBackground: Colors.white,
-      surface: Colors.white,
-      onSurface: Colors.white
+      onBackground: AppColors.blackColor,
+      surface:AppColors.blackColor,
+      onSurface: AppColors.blackColor
+  ),
+  appBarTheme: AppBarTheme(
+    centerTitle: true,
+    backgroundColor: Colors.transparent
   )
 );
 static ThemeData darkTheme = ThemeData(
+    appBarTheme: AppBarTheme(
+      centerTitle: true,
+        backgroundColor: Colors.transparent
+    ),
     scaffoldBackgroundColor: Colors.transparent,
-    textTheme: TextTheme(displayMedium: TextStyle(fontWeight: FontWeight.bold, fontSize: 30, color: Colors.white)),
+    textTheme: TextTheme(
+      titleMedium: TextStyle(fontWeight: FontWeight.w500, fontSize: 20, color: Colors.white),
+        titleLarge: TextStyle(fontWeight: FontWeight.w500, fontSize: 25, color: Colors.white),
+        headlineSmall: TextStyle(fontWeight: FontWeight.w500, fontSize: 20, color: Colors.white)),
     dividerTheme: DividerThemeData(
         color: AppColors.mainColorDark
     ),
