@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:islamic_app/common/app_images.dart';
+import 'package:islamic_app/generated/l10n.dart';
 import 'package:islamic_app/ui/tabs/hadeeth_tab.dart';
 import 'package:islamic_app/ui/tabs/quran_tab.dart';
 import 'package:islamic_app/ui/tabs/radio_tab.dart';
@@ -35,7 +36,7 @@ List<Widget> tabs = [
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.transparent,
-          title: Text("إسلامي",
+          title: Text(S.of(context).title,
           style: Theme.of(context).textTheme.headlineMedium
           ),
         ),
@@ -48,11 +49,11 @@ List<Widget> tabs = [
             });
           },
           items: [
-            BottomNavigationBarItem(icon: ImageIcon(AssetImage(AppImages.quranIcon)), label: "القرأن"),
-            BottomNavigationBarItem(icon: ImageIcon(AssetImage(AppImages.sebhaIcon)), label: "السبحة"),
-            BottomNavigationBarItem(icon: ImageIcon(AssetImage(AppImages.hadeethIcon)), label: "الحديث"),
-            BottomNavigationBarItem(icon: ImageIcon(AssetImage(AppImages.radioIcon)), label: "الراديو"),
-            BottomNavigationBarItem(icon: Icon(Icons.settings), label: "الإعدادات"),
+            BottomNavigationBarItem(icon: ImageIcon(AssetImage(AppImages.quranIcon)), label: S.of(context).quran),
+            BottomNavigationBarItem(icon: ImageIcon(AssetImage(AppImages.sebhaIcon)), label: S.of(context).sebha),
+            BottomNavigationBarItem(icon: ImageIcon(AssetImage(AppImages.hadeethIcon)), label:S.of(context).hadeeth),
+            BottomNavigationBarItem(icon: ImageIcon(AssetImage(AppImages.radioIcon)), label: S.of(context).radio),
+            BottomNavigationBarItem(icon: Icon(Icons.settings), label: S.of(context).settings),
           ],
         ),
       ),

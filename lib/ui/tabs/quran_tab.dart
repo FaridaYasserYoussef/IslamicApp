@@ -31,11 +31,11 @@ class _QuranTabState extends State<QuranTab> {
     //   getVirsesCount();
     // }
     return FutureBuilder<void>(
-      future: getVirsesCount(),
+      future: getVersesCount(),
       builder: (context, snapshot) {
         if(snapshot.hasData == false){
           return Center(child: CircularProgressIndicator(
-            color: Theme.of(context).primaryColor,
+            color: Theme.of(context).brightness == Brightness.light? AppColors.mainColorLight : AppColors.goldColor,
           ));
         }
 
@@ -115,16 +115,16 @@ class _QuranTabState extends State<QuranTab> {
     );
   }
 
-  Future<List<int>> getVirsesCount() async{
-    List<int> _virsesCount =[];
+  Future<List<int>> getVersesCount() async{
+    List<int> _versesCount =[];
     for(int i = 1; i <= suras.length; i++){
      String data =  await rootBundle.loadString("assets/quran/$i.txt");
      List<String> virsesList = data.trim().split("\n");
-     _virsesCount.add(virsesList.length);
+     _versesCount.add(virsesList.length);
     }
 setState(() {
-  versesCount = _virsesCount;
+  versesCount = _versesCount;
 });
-    return _virsesCount;
+    return _versesCount;
   }
 }

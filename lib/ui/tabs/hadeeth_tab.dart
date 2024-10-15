@@ -32,7 +32,7 @@ class _HadeethTabState extends State<HadeethTab> {
         builder: (context, snapshot) {
           if(snapshot.connectionState == ConnectionState.waiting){
             return Center(child: CircularProgressIndicator(
-              color: Theme.of(context).primaryColor,
+              color: Theme.of(context).brightness == Brightness.light? AppColors.mainColorLight : AppColors.goldColor,
             ));
           }
 
